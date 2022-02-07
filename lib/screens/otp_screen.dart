@@ -87,6 +87,4 @@ class _OtpScreenState extends State<OtpScreen> {
       ),
     );
   }
-
-// TODO Add text style Roboto
 }

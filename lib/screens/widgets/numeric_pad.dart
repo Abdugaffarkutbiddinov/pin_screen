@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class NumericPad extends StatelessWidget {
 
@@ -69,7 +70,7 @@ class NumericPad extends StatelessWidget {
         child: Text(
           "$number",
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: GoogleFonts.roboto(
               fontSize: 34 ,
               color: Colors.black87,
               fontWeight: FontWeight.w300),
