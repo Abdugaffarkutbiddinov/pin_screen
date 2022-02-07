@@ -76,14 +76,17 @@ class _OtpScreenState extends State<OtpScreen> {
   }
 
   buildPinRow() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        PinNumberBox(codeNumber: code.length > 0 ? code.substring(0, 1) : ""),
-        PinNumberBox(codeNumber: code.length > 1 ? code.substring(1, 2) : ""),
-        PinNumberBox(codeNumber: code.length > 2 ? code.substring(2, 3) : ""),
-        PinNumberBox(codeNumber: code.length > 3 ? code.substring(3, 4) : ""),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 60.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          PinNumberBox(codeNumber: code.length > 0 ? code.substring(0, 1) : "", color: code.length > 0 ? Colors.teal : Colors.white,),
+          PinNumberBox(codeNumber: code.length > 1 ? code.substring(1, 2) : "", color: code.length > 1 ? Colors.teal : Colors.white,),
+          PinNumberBox(codeNumber: code.length > 2 ? code.substring(2, 3) : "", color: code.length > 2 ? Colors.teal : Colors.white,),
+          PinNumberBox(codeNumber: code.length > 3 ? code.substring(3, 4) : "", color: code.length > 3 ? Colors.teal : Colors.white,),
+        ],
+      ),
     );
   }
 

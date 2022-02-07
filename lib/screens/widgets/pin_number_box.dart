@@ -2,18 +2,20 @@ import 'package:flutter/material.dart';
 
 class PinNumberBox extends StatelessWidget {
   final String codeNumber;
-  const PinNumberBox({required this.codeNumber});
+  final Color color;
+  const PinNumberBox({required this.codeNumber, required this.color});
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(horizontal: 8),
       child: SizedBox(
-        width: 60,
-        height: 60,
+        width: 28,
+        height: 28,
         child: Container(
           decoration: BoxDecoration(
-            color: Color(0xFFF6F5FA),
+            color: color,
+            border: Border.all(color: Colors.black),
             borderRadius: BorderRadius.all(
               Radius.circular(50),
             ),
@@ -30,6 +32,7 @@ class PinNumberBox extends StatelessWidget {
           ),
         ),
       ),
-    );;
+    );
+    ;
   }
 }
