@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pin_screen/screens/pin_screen.dart';
+import 'package:pin_screen/screens/otp_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: PinScreen(),
+      home: OtpScreen(),
     );
   }
 }
