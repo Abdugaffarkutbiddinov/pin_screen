@@ -51,7 +51,8 @@ class _OtpScreenState extends State<OtpScreen> {
               child: Container(
                 alignment: Alignment(0, 0.5),
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
-                child: Column(
+                child:
+                Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     const SecurityText(),
@@ -63,8 +64,9 @@ class _OtpScreenState extends State<OtpScreen> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 223.0,
+            Expanded(
+              child: SizedBox(
+              ),
             ),
             NumericPad(onNumberSelected: (value) {
               setState(() {
