@@ -15,14 +15,14 @@ class PinNumberBox extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             color: color,
-            border: Border.all(color: Colors.black),
+            border: Border.all(color: Colors.black54),
             borderRadius: BorderRadius.all(
               Radius.circular(50),
             ),
           ),
           child: Center(
             child: Text(
-              codeNumber.replaceAll(RegExp(r"."), "*"),
+              codeNumber.replaceAll(RegExp(r"."), ""),
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
