@@ -62,6 +62,7 @@ class NumericPad extends StatelessWidget {
       height: 60.0,
       alignment: Alignment.center,
       child: MaterialButton(
+        key: Key('number${number.toString()}'),
         padding: EdgeInsets.all(8.0),
         onPressed: () {
           onNumberSelected(number);
@@ -83,6 +84,7 @@ class NumericPad extends StatelessWidget {
     return Container(
       width: 60.0,
       child: MaterialButton(
+        key: const Key('backspace'),
         height: 60.0,
         onPressed: () {
           onNumberSelected(-1);

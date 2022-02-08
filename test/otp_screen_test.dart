@@ -12,10 +12,14 @@ void main() {
       home: child,
     );
   }
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('', (WidgetTester tester) async {
 
     OtpScreen screen = OtpScreen();
     await tester.pumpWidget(makeTestableWidget(screen));
+    await tester.tap(find.byKey(const Key('number1')));
+    await tester.pump();
+    expect(find.text('1'), findsOneWidget);
+
 
   });
 }
